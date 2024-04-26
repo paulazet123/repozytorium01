@@ -64,7 +64,7 @@
         }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[51.89716180177325,19.677035140060546],[51.9256914649152,19.763383627091105]]);
+        }).fitBounds([[51.89618811704185,19.676599860982893],[51.92471839856802,19.76294834801345]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -179,10 +179,10 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 2.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(125,139,143,1.0)',
+                fillColor: 'rgba(125,139,143,0.1568627450980392)',
                 interactive: true,
             }
         }
@@ -259,10 +259,10 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 2.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(190,178,151,1.0)',
+                fillColor: 'rgba(190,178,151,0.18823529411764706)',
                 interactive: true,
             }
         }
@@ -335,14 +335,14 @@
             return {
                 pane: 'pane_Lubowidza_3',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(129,60,20,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 2.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(145,82,45,1.0)',
+                fillColor: 'rgba(145,82,45,0.15294117647058825)',
                 interactive: true,
             }
         }
@@ -415,14 +415,14 @@
             return {
                 pane: 'pane_Szczecin22_4',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(19,123,52,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 2.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(133,182,111,1.0)',
+                fillColor: 'rgba(133,182,111,0.1568627450980392)',
                 interactive: true,
             }
         }
@@ -495,14 +495,14 @@
             return {
                 pane: 'pane_NowostawyDolne12_5',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(217,100,21,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 2.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(164,113,88,1.0)',
+                fillColor: 'rgba(164,113,88,0.13725490196078433)',
                 interactive: true,
             }
         }
@@ -575,14 +575,14 @@
             return {
                 pane: 'pane_NowostawyDolne22_6',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(243,196,43,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(213,180,60,1.0)',
+                fillColor: 'rgba(213,180,60,0.14901960784313725)',
                 interactive: true,
             }
         }
@@ -634,25 +634,7 @@
             popup.setContent(updatedContent);
         }
 
-        var pattern_powierzchnia_efektywna_7_0 = new L.StripePattern({
-            weight: 0.3,
-            spaceWeight: 2.0,
-            color: '#3eb2e3',
-            opacity: 1.0,
-            spaceOpacity: 0,
-            angle: 315
-        });
-        pattern_powierzchnia_efektywna_7_0.addTo(map);
         function style_powierzchnia_efektywna_7_0() {
-            return {
-                pane: 'pane_powierzchnia_efektywna_7',
-                stroke: false,
-                fillOpacity: 1,
-                fillPattern: pattern_powierzchnia_efektywna_7_0,
-                interactive: true,
-            }
-        }
-        function style_powierzchnia_efektywna_7_1() {
             return {
                 pane: 'pane_powierzchnia_efektywna_7',
                 opacity: 1,
@@ -662,6 +644,21 @@
                 lineJoin: 'bevel',
                 weight: 2.0,
                 fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        function style_powierzchnia_efektywna_7_1() {
+            return {
+                pane: 'pane_powierzchnia_efektywna_7',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,0,255,0.1607843137254902)',
                 interactive: true,
             }
         }
@@ -794,7 +791,7 @@
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((exp_label_powierzchnia_efektywna_7_eval_expression(context) !== null?String('<div style="color: #3e47e3; font-size: 10pt; font-weight: bold; font-family: \'Liberation Sans\', sans-serif;">' + exp_label_powierzchnia_efektywna_7_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_powierzchnia_efektywna_7'});
+            layer.bindTooltip((exp_label_powierzchnia_efektywna_7_eval_expression(context) !== null?String('<div style="color: #3e47e3; font-size: 10pt; font-family: \'Liberation Sans\', sans-serif;">' + exp_label_powierzchnia_efektywna_7_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_powierzchnia_efektywna_7'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
